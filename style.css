@@ -1,0 +1,427 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+
+
+body,html{
+	display: flex;
+	margin:0;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+
+}
+
+.bg{
+	background-image: url(galaxy.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.dog{
+	animation: dog 2s;
+	position: absolute;
+	border-radius: 50%;
+	border-style: solid;
+	border-color: white;
+	width: 200px;
+	top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.list{
+	animation: list 2s;
+	list-style-type: none;
+	list-style-image: url(instat.png);
+	position: absolute;
+	right: 05px;
+	top: 10px;
+}
+
+.lista{
+	animation: lista 2s;
+	list-style-type: none;
+	list-style-image: url(twitter.png);
+	position: absolute;
+	right: 80px;
+	top: 10px;
+}
+
+.nome{
+ border-right: 1px solid rgba(255, 255, 255, 0.75);
+ color: rgba(255,255,255, .75);
+ font-family: BEBAS NEUE;
+ font-size: 50px;
+ margin: 0 auto;
+ white-space: nowrap;
+ overflow: hidden;
+ text-align: center;
+
+}
+
+.infozin{
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+	position: absolute;
+	width: 200px;
+	top: 900px;
+	right: 10px;
+	
+
+	
+}
+
+
+.typing-animation{
+	animation: linkcursor 500ms steps(40) infinite normal, typing 3s steps(40) 0.8s normal both;
+
+}
+
+
+@keyframes linkcursor {
+
+	from{
+		border-right-color:rgba(255, 255, 255, 0.75);
+	}
+	to{
+		border-right-color: transparent;	
+	}
+}
+
+@keyframes typing {
+
+	from{
+		width: 0px;
+	}
+
+	to{
+		width: 500px;
+	}
+
+
+}
+
+
+#music{
+	width: 200px;
+	position: absolute;
+	top: 900px;
+
+}
+
+section{
+	position: absolute;
+	padding: 0 100px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row-reverse;
+
+}
+	
+.box{
+	animation-fill-mode: 2s;
+	animation: box 3.5s;
+	top: 230px;
+	position: absolute;
+	text-align: center;
+	color: white;
+	font-family: BEBAS NEUE;
+	position: relative;
+	max-width: 600px;
+	padding: 50px;
+	background: rgba(100,100,100,.2);
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+.box h2{
+	margin: 0 0 20px;
+	padding: 0;
+	font-size: 48px;
+	text-transform: uppercase;
+	color: #e74c3c;
+
+}
+
+.box p{
+
+	font-size: 20px;
+}
+
+
+@keyframes box {
+
+	from{
+		transform: translateY(40px);
+		opacity: 0;
+
+	}
+
+
+	to {
+		transform: translateY(0px);
+		opacity: 1;
+
+	}
+
+}
+
+
+
+@keyframes dog {
+	
+	from{
+	width: 0px;
+	opacity: 0;
+
+	}
+
+	to{
+	width: 200px;
+	opacity: 1;
+
+	}
+}
+
+@keyframes list {
+	from{
+		opacity: 0;
+		top: -10px;
+
+	}
+
+	to{
+		opacity: 1;
+		top: 10px;
+
+	}
+}
+
+
+@keyframes lista {
+	from{
+		opacity: 0;
+		top: -10px;
+
+	}
+
+	to{
+		opacity: 1;
+		top: 10px;
+
+	}
+}
+
+
+.infozin:hover{
+	opacity: 0.9;
+	width: 195px;
+
+}
+
+.lista:hover{
+	opacity: 0.8;
+}
+
+.list:hover{
+	opacity: 0.8;
+}
+
+#slider {
+	margin: 0 auto;
+	width: 800px;
+	max-width: 100%;
+	text-align: center;
+
+}
+
+#slider input[type=radio] {
+	display: none;
+}
+#slider label {
+	cursor:pointer;
+	text-decoration: none; 
+}
+
+#slides {
+	animation: box 3.5s;
+	top: 160px;
+	font-family: BEBAS NEUE;
+	font-size: 28px;
+	box-shadow: 0 5px 15px rgba(0,0,0,.5); 
+	padding: 30px;
+	border: 2px solid #ccc;
+	background: rgba(100,100,100,.2);
+	position: relative; 
+	z-index: 1;
+
+}
+
+#overflow{
+	animation: box 3.5s;
+	width: 100%;
+	overflow: hidden;
+
+}
+
+#slide1:checked ~ #slides .inner{
+	margin-left: 0;
+
+}
+#slide2:checked ~ #slides .inner{
+	margin-left: -100%;
+
+}
+#slide3:checked ~ #slides .inner{
+	margin-left: -200%;
+
+}
+
+#slides .inner {
+	animation: inner 3.5s;
+	transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	width: 400%;
+	line-height: 2;
+	height: 200px;
+}
+
+#slides .slide{
+	width: 25%;
+	float: left;
+	display: block;
+	height: 100%;
+	color: #dcdde1;
+}
+
+#slides. slide_1{
+	background: #f5f6fa;
+}
+
+#slides. slide_2{
+	background: #f5f6fa;
+}
+
+#slides. slide_3{
+	background: #f5f6fa;
+}
+
+.slide-content{
+	padding: 0px;
+
+}
+
+#controls {
+	margin: -100px 0 0 0;
+	margin-left: 300px;
+	width: 100%;
+	height: 50px;
+	z-index: 3;
+	position: absolute;
+
+}
+
+#controls label{
+	transition: opacity 0.2s ease-out;
+	display: flex;
+	width: 50px;
+	height: 10px;
+	opacity: .4; 
+}
+
+#controls label:hover {
+	opacity: 1;
+}
+
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(1), {
+	background: url(right.png) no-repeat;
+	float: right;
+	margin: 0 -50px 0 0;
+	display: block; 
+}
+
+
+.bar{
+	animation: box 3.5s;
+	width: 50px;
+	height: 10px;
+	border: 2px solid #fff;
+	margin: 6px;
+	float: left;
+	cursor: pointer;
+}
+
+.bar:hover{
+	background: #fff;
+
+}
+
+@keyframes bar {
+	from{
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+
+}
+
+
+@keyframes inner {
+
+	from{
+		
+		opacity: 0;
+	}
+
+	to {
+		
+		opacity: 1;
+	}
+
+
+}
+
+
+@keyframes overflow {
+
+	from{
+		
+		opacity: 0;
+	}
+
+	to {
+		
+		opacity: 1;
+	}
+
+
+}
+
+@keyframes slides {
+
+	from{
+		
+		opacity: 0;
+	}
+
+	to {
+		
+		opacity: 1;
+	}
+
+
+}
+
+
+
